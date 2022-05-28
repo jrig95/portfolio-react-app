@@ -1,9 +1,10 @@
 import React, {useState} from 'react'
 import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
+// import {HiOutlineMail} from 'react-icons/hi'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/J.png'
 import {Link} from 'react-scroll'
+import Resume from '../resume/resume.pdf';
 
 
 const Navbar = () => {
@@ -13,33 +14,33 @@ const Navbar = () => {
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
       <div>
-        <img src={Logo} alt="Logo" style={{ width: "50px" }} />
+        <img src={Logo} alt="Logo" style={{ width: "85px" }} />
       </div>
 
       {/* menu */}
 
       <ul className="hidden md:flex">
-        <li>
+        <li className="hover:text-pink-600">
           <Link activeClass="active" to="home" smooth={true} duration={500}>
             Home
           </Link>
         </li>
-        <li>
+        <li className="hover:text-pink-600">
           <Link activeClass="active" to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
-        <li>
+        <li className="hover:text-pink-600">
           <Link activeClass="active" to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
-        <li>
+        <li className="hover:text-pink-600">
           <Link activeClass="active" to="work" smooth={true} duration={500}>
             Work
           </Link>
         </li>
-        <li>
+        <li className="hover:text-pink-600">
           <Link activeClass="active" to="contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -122,7 +123,9 @@ const Navbar = () => {
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href="https://www.linkedin.com/in/james-riggleman-a8155886/"
+              target="_blank"
+              rel="noreferrer"
             >
               Linkedin <FaLinkedin size={30} />
             </a>
@@ -132,12 +135,14 @@ const Navbar = () => {
             <a
               className="flex justify-between items-center w-full text-gray-300"
               href="https://www.github.com/jrig95"
+              target="_blank"
+              rel="noreferrer"
             >
               Github <FaGithub size={30} />
             </a>
           </li>
 
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#34A853]">
+          {/* <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#34A853]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
               href="/"
@@ -145,12 +150,14 @@ const Navbar = () => {
               Email
               <HiOutlineMail size={30} />
             </a>
-          </li>
+          </li> */}
 
-          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]">
+          <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#34A853]">
             <a
               className="flex justify-between items-center w-full text-gray-300"
-              href="/"
+              href={Resume}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Resume <BsFillPersonLinesFill size={30} />
             </a>
