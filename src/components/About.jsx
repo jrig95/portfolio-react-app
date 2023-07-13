@@ -20,7 +20,7 @@ const About = () => {
             <p>
               I am a software developer with robust problem-solving skills and
               proven experience in creating and designing software in a
-              test-driven environment. I'm a team oriented individual with a passion for building excellent software.
+              test-driven environment. I'm a team-oriented individual with a passion for building excellent software.
             </p>
           </div>
         </div>
